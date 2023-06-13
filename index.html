@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Street Fighter II</title>
+        <style>
+            html,
+            body {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+            }
+
+            body,
+            canvas {
+                background-color: black;
+            }
+
+            canvas {
+                width: 100%;
+                object-fit: contain; /*contain size of canvas within parent to preserve aspect ratio */
+                /*makes pixels more large and defined */
+                image-rendering: crisp-edges;
+                image-rendering: pixelated;
+            }
+
+            img {
+                /*Don't want imgs to be displayed on DOM by default*/
+                display: none;
+            }
+        </style>
+        <script type="module" src="src/app.js"></script>
+        <img src = "images/ken.png" alt="ken"/>
+        <img src = "images/Ken-SF2-Stage.png" alt="background"/>
+        <img src = "images/ryu.png" alt="ryu"/>
+    </head>
+    <body>
+        <canvas></canvas>
+    </body>
+</html>
